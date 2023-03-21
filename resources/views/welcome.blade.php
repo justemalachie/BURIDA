@@ -219,11 +219,11 @@
                 transform: translateX(-50%);
             }
 
-            #about, #about-kokro, #services, #connexion-social, #skills, #teams, #contact, footer{
+            #about, #about-kokro, #services, #connexion-social, #skills, #projets, #contact, footer{
                 font-family: 'Poppins', sans-serif;
             }
 
-            .about-mudesko .about-content, .services .serv-content, .skills .skills-content, .teams .teams-content, .contact .contact-content, .connexion-social-content{
+            .about-mudesko .about-content, .oeuvres .oeuvres-content, .skills .skills-content, .projets .projets-content, .contact .contact-content, .connexion-social-content{
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
@@ -281,117 +281,175 @@
 
             /* About kokro-kouassikro */
             /* services */
-            .services, .teams{
+            .oeuvres{
                 color: #fff;
                 background: #111;
             }
-            .services .title::before, .teams .title::before{
+            .oeuvres .title{
+                text-transform: capitalize;
+            }
+            .oeuvres .title::before{
                 background: #fff;
             }
-            .services .title::after, .teams .title::after{
-                content: 'Nos services';
+            .oeuvres .title::after{
+                content: 'Nos oeuvres';
                 background: #111;
             }
-            .services .serv-content .card{
-                width: calc(33% - 20px);
-                background: #222;
-                text-align: center;
-                border-radius: 6px;
-                padding: 20px 25px;
-                transition: all .3s ease;
+            .max-width-oeuvres{
+                max-width: 1800px;
+                padding: 0 80px;
+                margin: auto;
             }
-            .services .serv-content .card:hover{
+            .oeuvres .oeuvres-content{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .oeuvres .oeuvres-content .card{
+                position: relative;
+                background: #181818;
+                text-align: center;
+                padding: 10px;
+                border-radius: 15px;
+                overflow: hidden;
+                height: 350px;
+            }
+            .oeuvres .oeuvres-content .card:hover{
                 background: #FF5733;
             }
-            .services .serv-content .card .box{
+            .oeuvres .oeuvres-content .card .box{
+                padding: 10px;
                 transition: all .3s ease;
             }
-            .services .serv-content .card:hover .box{
+            .oeuvres .oeuvres-content .card:hover .box{
                 transform: scale(1.05);
             }
-            .services .serv-content .card i{
+            .oeuvres .oeuvres-content .card i{
                 font-size: 50px;
                 color: #FF5733;
                 transition: color 0.3s ease;
             }
-            .services .serv-content .card:hover i{
+            .oeuvres .oeuvres-content .card:hover i{
                 color: #fff;
             }
-            .services .serv-content .card .text{
+
+            .oeuvres .oeuvres-content .card a i{
+                text-align: center;
+                font-size: 15px;
+                color: #000;
+                padding: 5px 10px 5px 10px;
+                border-radius: 50%;
+                background: #fff;
+                transition: color 0.3s ease;
+            }
+
+            .oeuvres .oeuvres-content .card:hover a i{
+                color: #000;
+            }
+            .oeuvres .oeuvres-content .card .text{
                 font-size: 25px;
                 font-weight: 500;
                 margin: 10px 0 7px 0;
             }
 
-            /* teams */
-            .teams .title::after{
-                    content: 'my teams';
+            .button-oeuvre a{
+               display: inline-flex;
+               text-align: center;
+               background: #FF5733;
+               color: #fff;
+               text-transform: uppercase;
+               font-size: 13px;
+               font-weight: 500;
+               padding: 12px 15px;
+               margin-top: 20px;
+               border-radius: 6px;
+               border:  2px solid #FF5733;
+               transition: all 0.3s ease-in-out;
             }
-            .teams .carousel .card{
-                background: #222;
-                border-radius: 6px;
-                padding: 25px 35px;
-                text-align: center;
-                transition: all 0.3s ease;
+
+            /* END OEUVRES  */
+
+            /*==============PROJETS============= */
+            .projets .title{
+                text-transform: capitalize;
             }
-            .teams .carousel .card:hover{
-                background: #FF5733;
+            .projets .title::after{
+                 content: 'nos projets';
             }
-            .teams .carousel .card .box{
+            .projets .projets-content{
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center ;
-                transition: all 0.3s ease;
+                justify-content: space-around;
             }
-            .teams .carousel .card:hover .box{
-                transform: scale(1.05);
-            }
-            .teams .carousel .card .text{
-                font-size: 25px;
-                font-weight: 500;
-                margin: 10px 0 7px 0;
-            }
-            .teams .carousel .card img{
-                height: 150px;
-                width: 150px;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 5px solid #FF5733;
-            }
-            .teams .carousel .card:hover img{
-                background: #fff;
-            }
-            .owl-dots{
+            .projets .projets-content .card{
+                width: 50%;
                 text-align: center;
-                margin-top: 20px;
+                padding: 10px;
+                height: 350px;
+                width: 400px;
             }
-            .owl-dot{
-                height: 13px;
-                width: 13px;
-                margin: 0 5px;
-                outline: none !important;
-                border-radius: 50%;
-                border: 2px solid #FF5733 !important;
+
+            .projets .projets-content .card .box{
+                text-align: center;
+                border: 1px solid;
+                border-radius: 50px;
+                overflow: hidden;
             }
-            .owl-dot.active{
-                width: 35px;
-                border-radius: 14px;
+            .projets .projets-content .card .text{
+                display: inline-block;
+                transform: translate(5%);
+                padding: 10px 100px 10px  100px;
+                background: #FF5733;
+                border-radius: 50px;
+                margin-bottom: 10px;;
+                color: #fff;
             }
-            .owl-dot.active,
-            .owl-dot:hover{
-                background: #FF5733 !important;
+
+            .projets .projets-content .card .box p{
+                line-height: 3em;
             }
+            .button-projets{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+            .link-projets, i{
+                background: #FF5733;
+                display: flex;
+                text-align: center;
+                padding: 10px;
+            }
+
+            /*============ END PROJETS=========== */
 
             /* CONNEXION  */
 
+            .connexion-social{
+               padding: 100px 0;
+            }
+            .connexion-social{
+                background: linear-gradient(#FF5733, #5a5c5f);
+                color: #fff;
+            }
+            .connexion-social-content .title a{
+                font-size: 40px;
+            }
 
+            .connexion-social-content .form-social{
+                font-size: 40px;
+            }
+
+            /* END CONNEXION  */
+
+            /* FOOTER  */
             footer{
                 display: flex;
                 justify-content: center;
                 background:  #111;
                 padding: 20px 23px;
             }
+
             footer span{
                 color: #fff;
             }
@@ -402,6 +460,9 @@
             footer span a:hover{
                 text-decoration: underline;
             }
+
+            /* END FOOTER  */
+
             /* responsive media query start */
 
             @media (max-width: 1300px){
@@ -476,16 +537,6 @@
                     flex: 100%;
 
                 }
-                .services .serv-content .card{
-                    width: calc(50% - 10px);
-                    margin-bottom: 20px;
-                }
-
-                .skills .skills-content .column,
-                .contact .contact-content .column{
-                  width: calc(50% - 30px);
-                  margin-bottom: 20px;
-                }
             }
 
             @media (max-width: 690px){
@@ -497,32 +548,12 @@
                     height: 250px;
                     width: 250px;
                 }
-                .services .serv-content .card, .skills .skills-content .column,  .contact .contact-content .column{
+                .oeuvres .oeuvres-content .card{
                     width: 100%;
                 }
             }
 
-            /* @media (max-width: 500px){
-                .max-width{
-                    padding: 0 50px;
-                }
-            } */
 
-            /* connexion */
-            .connexion-social{
-               padding: 100px 0;
-            }
-            .connexion-social{
-                background: linear-gradient(#FF5733, #5a5c5f);
-                color: #fff;
-            }
-            .connexion-social-content .title a{
-                font-size: 40px;
-            }
-
-            .connexion-social-content .form-social{
-                font-size: 40px;
-            }
         </style>
     </head>
     <body>
@@ -590,63 +621,145 @@
 
             </div>
         </section>
+
+            {{-- ACTUALITES  --}}
+            <section class="actualites" id="actualites">
+                    <div class="max-width-actualites">
+                        <div class="tiltle">Nos actualites</div>
+                        <div class="actualites-cont">
+                            <div class="card">
+                                <div class="box">
+                                    <div class="text">
+                                    </div>
+                                     <p></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="box">
+                                    <div class="text">
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="box">
+                                    <div class="text">
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="box">
+                                    <div class="text">
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="box">
+                                    <div class="text">
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            {{-- END ACTUALITES  --}}
+
             <!-- OEUVRES -->
+        <section class="oeuvres" id="oeuvres">
+            <div class="max-width-oeuvres">
+                <h2 class="title">oeuvres </h2>
+                <div class="oeuvres-content">
 
-            <!-- END OEUVRES -->
-
-        <!-- SERVICES -->
-        <section class="services" id="services">
-            <div class="max-width">
-                <h2 class="title">Services </h2>
-                <div class="serv-content">
-                    <div class="card">
-                        <div class="box">
-                            <i class="fas fa-music"></i>
-                            <div class="text">Music</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-music"></i>
+                                <div class="text">Music</div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                            </div>
+                            <a href="#" class="but-oeuvre"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="box">
-                            <i class="fas fa-video"></i>
-                            <div class="text">Audiovisuelle</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-video"></i>
+                                <div class="text">Audiovisuelle</div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                            </div>
+                            <a href="#" class="but-oeuvre"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="box">
-                            <i class="fas fa-book"></i>
-                            <div class="text">Literrature</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-book"></i>
+                                <div class="text">Literrature</div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                            </div>
+                            <a href="#" class="but-oeuvre"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="box">
-                            <i class="fas fa-chess-board"></i>
-                            <div class="text">Art de la scene</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-chess-board"></i>
+                                <div class="text">Art de la scene</div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                            </div>
+                            <a href="#" class="but-oeuvre"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="box">
-                            <i class="fas fa-film"></i>
-                            <div class="text">Art visuel</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                        <div class="card">
+                            <div class="box">
+                                <i class="fas fa-film"></i>
+                                <div class="text">Art visuel</div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, distinctio cumque, praesentium qui rerum quas suscipit voluptatibus doloribus aliquid dolore nostrum quia architecto molestias sunt laudantium, repellendus ipsam animi dolores.</p>
+                            </div>
+                            <a href="#" class="but-oeuvre"><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
-                    </div>
+
+
+                </div>
+                <div class="button-oeuvre">
+                    <a href="#">en savoir plus</a>
                 </div>
             </div>
         </section>
-        <!-- END SERVICES -->
+    <!-- END OEUVRES -->
 
         {{-- PROJETS  --}}
         <section id="projets" class="projets">
             <div class="max-width">
-                h2.
+                <h2 class="title">projets</h2>
+                <div class="projets-content">
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="text">Aide aux projets</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas minima architecto fugiat ea sapiente. Facilis dolores
+                                voluptates doloremque quod! Fugiat quos architecto distinctio
+                                quis hic alias, ea nulla rerum consequatur.
+                            </p>
+                            <div class="button-projets">
+                                <a href="#" class="link-projets">en savoir plus <i class="fas fa-chevron-right" aria-hidden="true"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+                            <div class="text">Aide aux projets</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas minima architecto fugiat ea sapiente. Facilis dolores
+                                voluptates doloremque quod! Fugiat quos architecto distinctio
+                                quis hic alias, ea nulla rerum consequatur.
+                            </p>
+                            <div class="button-projets">
+                                <a href="#" class="link-projets">en savoir plus <i class="fas fa-chevron-right" aria-hidden="true"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
         {{-- END PROJETS  --}}
