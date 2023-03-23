@@ -219,11 +219,11 @@
                 transform: translateX(-50%);
             }
 
-            #about, #about-kokro, #services, #connexion-social, #skills, #projets, #contact, footer{
+            #about, #about-kokro, #actualites , #connexion-social, #oeuvres, #projets, #contact, footer{
                 font-family: 'Poppins', sans-serif;
             }
 
-            .about-mudesko .about-content, .oeuvres .oeuvres-content, .skills .skills-content, .projets .projets-content, .contact .contact-content, .connexion-social-content{
+            .about-mudesko .about-content, .oeuvres .oeuvres-content, .projets .projets-content, .contact .contact-content, .connexion-social-content{
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
@@ -278,14 +278,33 @@
                 color: #FF5733;
                 background: none;
             }
+            /* ACTUALITES  */
+            .actualites .title::before{
+                background: #fff;
+            }
+            .actualites .title::after{
+                content: 'Nos oeuvres';
+                background: #111;
+            }
 
-            /* About kokro-kouassikro */
-            /* services */
+            .actualites-content{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr)
+            }
+
+            .actualites-content .card{
+                border: 1px solid #000;
+            }
+
+            /* END ACTUALITES  */
+
+
+            /* OEUVRES  */
             .oeuvres{
                 color: #fff;
                 background: #111;
             }
-            .oeuvres .title{
+            .oeuvres .title, .actualites .title{
                 text-transform: capitalize;
             }
             .oeuvres .title::before{
@@ -354,8 +373,7 @@
             }
 
             .button-oeuvre a{
-               display: inline-flex;
-               text-align: center;
+               display: inline-block;
                background: #FF5733;
                color: #fff;
                text-transform: uppercase;
@@ -391,13 +409,13 @@
 
             .projets .projets-content .card .box{
                 text-align: center;
-                border: 1px solid;
+                border: 1px solid rgba(0, 0, 0, 0.384);
                 border-radius: 50px;
+                box-shadow:  5px 5px 5px 5px #999999;
                 overflow: hidden;
             }
             .projets .projets-content .card .text{
                 display: inline-block;
-                transform: translate(5%);
                 padding: 10px 100px 10px  100px;
                 background: #FF5733;
                 border-radius: 50px;
@@ -413,12 +431,24 @@
                 justify-content: center;
                 text-align: center;
                 align-items: center;
+                padding-bottom: 10px;
             }
-            .link-projets, i{
-                background: #FF5733;
-                display: flex;
-                text-align: center;
-                padding: 10px;
+
+            .projets-content .button-projets .link-projets {
+               display: inline-block;
+               background: #FF5733;
+               color: #fff;
+               text-transform: uppercase;
+               font-size: 13px;
+               font-weight: 500;
+               padding: 10px 15px;
+               margin-top: 20px;
+               border-top-left-radius: 10px;
+               border-top-right-radius: 10px;
+               border-bottom-left-radius: 50px;
+               border-bottom-right-radius: 50px;
+               border:  2px solid #FF5733;
+               transition: all 0.3s ease-in-out;
             }
 
             /*============ END PROJETS=========== */
@@ -443,24 +473,47 @@
             /* END CONNEXION  */
 
             /* FOOTER  */
-            footer{
+            .footer-max-width{
+                padding: 100px;
+            }
+
+            .footer-footer-top{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .footer-center, .footer-right{
+                display: flex;
+                flex-flow: column wrap;
+            }
+
+            .footer-footer-bottom{
                 display: flex;
                 justify-content: center;
                 background:  #111;
                 padding: 20px 23px;
             }
 
-            footer span{
+            .footer-footer-bottom span{
                 color: #fff;
             }
-            footer span a{
+            .footer-footer-bottom span a{
                 color: #FF5733;
                 text-decoration: none
             }
-            footer span a:hover{
+            .footer-footer-bottom span a:hover{
                 text-decoration: underline;
             }
+            .footer-img-left{
+                height: 100px;
+                width: 100px;
+            }
 
+            .footer-img-left img{
+                height: 100%;
+                width: 100%;
+            }
+            .
             /* END FOOTER  */
 
             /* responsive media query start */
@@ -625,41 +678,51 @@
             {{-- ACTUALITES  --}}
             <section class="actualites" id="actualites">
                     <div class="max-width-actualites">
-                        <div class="tiltle">Nos actualites</div>
-                        <div class="actualites-cont">
+                        <div class="title">actualites</div>
+                        <div class="actualites-content">
+
                             <div class="card">
                                 <div class="box">
-                                    <div class="text">
-                                    </div>
+                                    <div class="img"><img src="" alt=""></div>
+                                    <div class="text"> </div>
                                      <p></p>
+                                     <a href="#">en savoir plus</a>
                                 </div>
                             </div>
+
                             <div class="card">
                                 <div class="box">
-                                    <div class="text">
-                                    </div>
-                                    <p></p>
+                                    <div class="img"><img src="" alt=""></div>
+                                    <div class="text"> </div>
+                                     <p></p>
+                                     <a href="#">en savoir plus</a>
                                 </div>
                             </div>
+
                             <div class="card">
                                 <div class="box">
-                                    <div class="text">
-                                    </div>
-                                    <p></p>
+                                    <div class="img"><img src="" alt=""></div>
+                                    <div class="text"> </div>
+                                     <p></p>
+                                     <a href="#">en savoir plus</a>
                                 </div>
                             </div>
+
                             <div class="card">
                                 <div class="box">
-                                    <div class="text">
-                                    </div>
-                                    <p></p>
+                                    <div class="img"><img src="" alt=""></div>
+                                    <div class="text"> </div>
+                                     <p></p>
+                                     <a href="#">en savoir plus</a>
                                 </div>
                             </div>
+
                             <div class="card">
                                 <div class="box">
-                                    <div class="text">
-                                    </div>
-                                    <p></p>
+                                    <div class="img"><img src="" alt=""></div>
+                                    <div class="text"> </div>
+                                     <p></p>
+                                     <a href="#">en savoir plus</a>
                                 </div>
                             </div>
                         </div>
@@ -719,7 +782,7 @@
 
                 </div>
                 <div class="button-oeuvre">
-                    <a href="#">en savoir plus</a>
+                    <a href="#">en savoir plus <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -740,7 +803,7 @@
                                 quis hic alias, ea nulla rerum consequatur.
                             </p>
                             <div class="button-projets">
-                                <a href="#" class="link-projets">en savoir plus <i class="fas fa-chevron-right" aria-hidden="true"></i> </a>
+                                <a href="#" class="link-projets">en savoir plus <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -754,7 +817,7 @@
                                 quis hic alias, ea nulla rerum consequatur.
                             </p>
                             <div class="button-projets">
-                                <a href="#" class="link-projets">en savoir plus <i class="fas fa-chevron-right" aria-hidden="true"></i> </a>
+                                <a href="#" class="link-projets">en savoir plus <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -770,14 +833,13 @@
                 <div class="connexion-social-content">
                     <div class="title">
                         <a>Soyez toujours connectés</a><br>
-                        <span>Suivez-nous sur les differents plateforme </span>
+                        <span>Suivez-nous sur les differents plateforme</span>
                     </div>
                     <div class="form-social" data-aos="fade-left" data-aos-duration="1000">
                         <a href="https://www.facebook.com/buridaofficiel" target="bank"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com/BuridaOfficiel" target="bank"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fab fa-youtube    "></i></a>
-                        {{-- <a href="#"><i class="fab fa-youtube"></i></a> --}}
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -785,8 +847,43 @@
         {{-- END CONNECTION  --}}
 
         <!-- footer section start -->
-        <footer>
-            <span>Créer par le <a href="#">BURIDA</a> | <span class="fas fa-copyright"></span>2022 Tous droits reservés </span>
+        <footer id="footer" class="footer">
+                <div class="footer-max-width">
+                    <div class="footer-footer-top">
+                        <div class="footer-left">
+                            <div class="footer-img-left">
+                                <a href="/"><img src="{{asset('images/buridaci.png')}}" alt=""></a>
+                                <p>Terminus 81/82</p>
+                                <div class="icon-footer-left">
+                                    <a href="https://www.facebook.com/buridaofficiel" target="bank"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://twitter.com/BuridaOfficiel" target="bank"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-center">
+                            <div class="text">titre</div>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                        </div>
+
+                        <div class="footer-right">
+                            <div class="text">titre</div>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                            <a href="">1</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-footer-bottom">
+                    <span>Créer par le <a href="#">BURIDA </a> | <span class="fas fa-copyright"></span> 2023 Tous droits reservés </span>
+                </div>
         </footer>
         <!-- link javascript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
