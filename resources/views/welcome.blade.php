@@ -169,7 +169,21 @@
                 text-transform: uppercase;
                 font-style: italic;
             }
-            /* LOGO  */
+
+            /* ==========LOGO===========  */
+            .logo{
+                background: #fff;
+                width: 200px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+            }
+
+             .logo img{
+                padding: 10px;
+             }
+            /* ==========END LOGO===========  */
 
 
             /* home slider */
@@ -332,14 +346,15 @@
                 padding: 10px;
                 border-radius: 15px;
                 overflow: hidden;
-                height: 350px;
             }
+
             .oeuvres .oeuvres-content .card:hover{
                 background: #FF5733;
             }
             .oeuvres .oeuvres-content .card .box{
-                padding: 10px;
                 transition: all .3s ease;
+                padding: 5px;
+                height: 310px;
             }
             .oeuvres .oeuvres-content .card:hover .box{
                 transform: scale(1.05);
@@ -459,7 +474,7 @@
                padding: 100px 0;
             }
             .connexion-social{
-                background: linear-gradient(#FF5733, #5a5c5f);
+                background: #FF5733;
                 color: #fff;
             }
             .connexion-social-content .title a{
@@ -505,6 +520,10 @@
                 text-decoration: underline;
             }
             .footer-img-left{
+                height: 100px;
+                width: 100%;
+            }
+            .footer-img-left img{
                 height: 100px;
                 width: 100px;
             }
@@ -616,14 +635,16 @@
     </div>
         <nav class="navbar">
             <div class="max-width">
-                <div class="logo"><a href="#">BURI<span>DA</span></a></div>
+                <div class="logo"><a href="/"><img src="{{ asset('images/buridaci.png')}}" alt=""></a></div>
                 <ul class="menu">
-                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/">le burida</a>
+                        <div class="submenu">
+
+                        </div>
+                    </li>
                     <li><a href="{{route ('rdvs.liste')}}">Prise de rendez-vous</a></li>
-                    <li><a href="{{ route('cellules.liste')}}">cellule</a></li>
-                    <li><a href="{{ route('bu.liste')}}">bureau</a></li>
-                    <li><a href="{{ route('documentalistes.liste')}}">documentaliste</a></li>
-                    {{-- <li><a href="#">Devenir membre</a></li> --}}
+                    <li><a href="#">Devenir membre</a></li>
+                    <li><a href="#"></a></li>
                 </ul>
                 <div class="authe">
                     @auth
@@ -641,7 +662,7 @@
                 </div>
             </div>
         </nav>
-
+        {{-- END NAVIGATION --}}
      <!-- SLIDER -->
         <section class="home" id="home">
             <div class="max-width">
@@ -781,9 +802,9 @@
 
 
                 </div>
-                <div class="button-oeuvre">
+                {{-- <div class="button-oeuvre">
                     <a href="#">en savoir plus <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-                </div>
+                </div> --}}
             </div>
         </section>
     <!-- END OEUVRES -->
@@ -853,30 +874,31 @@
                         <div class="footer-left">
                             <div class="footer-img-left">
                                 <a href="/"><img src="{{asset('images/buridaci.png')}}" alt=""></a>
-                                <p>Terminus 81/82</p>
+                            </div>
+                                <p>Abidjan, Cocody Angré, Terminus 81,82</p>
                                 <div class="icon-footer-left">
                                     <a href="https://www.facebook.com/buridaofficiel" target="bank"><i class="fab fa-facebook"></i></a>
                                     <a href="https://twitter.com/BuridaOfficiel" target="bank"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fab fa-youtube"></i></a>
                                 </div>
-                            </div>
                         </div>
 
                         <div class="footer-center">
-                            <div class="text">titre</div>
-                            <a href="">1</a>
-                            <a href="">1</a>
-                            <a href="">1</a>
-                            <a href="">1</a>
+                            <div class="text">Ressources et documents</div>
+                            <a href="">Aide et Contact</a>
+                            <a href="">Ressources et documents</a>
+                            <a href="">Ressources et presse</a>
+                            <a href="">Mentions légales et CGU</a>
+                            <a href="">Politique de confidentialité et cookies</a>
                         </div>
 
                         <div class="footer-right">
-                            <div class="text">titre</div>
-                            <a href="">1</a>
-                            <a href="">1</a>
-                            <a href="">1</a>
-                            <a href="">1</a>
+                            <div class="text">Autres sites</div>
+                            <a href="">Clients Utilisateurs</a>
+                            <a href="">Répertoire des Œuvres</a>
+                            <a href="">Aide aux Projets</a>
+                            <a href="">Emplois & carrières</a>
                         </div>
 
                     </div>
